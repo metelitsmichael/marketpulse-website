@@ -1,6 +1,6 @@
 # MarketPulse Intelligence — Marketing Website
 
-Public-facing marketing site for MarketPulse Intelligence. Deploys to Railway from GitHub with zero configuration.
+Public-facing marketing site for MarketPulse Intelligence. Deploys to Railway from GitHub with zero configuration. Live at **marketpulseintelligence.io**.
 
 ## Stack
 
@@ -24,6 +24,10 @@ Railway reads `nixpacks.toml`, installs dependencies, and runs `node server.js`.
 ### Health check
 
 `GET /healthz` returns `200 ok` — used by Railway uptime monitoring.
+
+## Custom domain
+
+Bound to `marketpulseintelligence.io` via Cloudflare. DNS: CNAME at root (via CNAME flattening) → Railway CNAME target. SSL mode: Full (strict).
 
 ## Structure
 
